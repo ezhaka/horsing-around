@@ -1,3 +1,5 @@
 fun main(args: Array<String>) {
-    println("Hello, world!")
+    2 + 2
+    1 + 1
+    println("Hello, world :(")
 }
