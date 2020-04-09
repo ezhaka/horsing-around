@@ -12,7 +12,9 @@ import (
 type AppHandler struct{}
 
 func (h AppHandler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
-	if req.Method == "POST" && req.URL.Path == "/convert" {
+    if req.Method == "GET" && req.URL.Path == "/ping" {
+        resp.WriteHeader(200)
+    } else if req.Method == "POST" && req.URL.Path == "/convert" {
 		if err := ProcessConvertRequest(resp, req); err != nil {
 			Error.Printf(err.Error())
 			resp.WriteHeader(500)
@@ -23,7 +25,12 @@ func (h AppHandler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 }
 
 func app() error {
-	listener, err := net.Listen("tcp", "0.0.0.0:8080")
+    err := InitVips()
+    if err != nil {
+        return err
+    }
+
+    listener, err := net.Listen("tcp", "0.0.0.0:8080")
 	if err != nil {
 		return err
 	}
