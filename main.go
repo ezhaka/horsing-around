@@ -12,7 +12,9 @@ import (
 type AppHandler struct{}
 
 func (h AppHandler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
-	if req.Method == "POST" && req.URL.Path == "/convert" {
+    if req.Method == "GET" && req.URL.Path == "/ping" {
+        resp.WriteHeader(200)
+    } else if req.Method == "POST" && req.URL.Path == "/convert" {
 		if err := ProcessConvertRequest(resp, req); err != nil {
 			Error.Printf(err.Error())
 			resp.WriteHeader(500)
