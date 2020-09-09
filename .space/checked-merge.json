@@ -1,0 +1,10 @@
+{
+    "teamcity-configurations": [
+        "Circlet_BuildComposite"
+    ],
+    "retries": 4,
+    "retry-same-merge": true,
+    "exclusive-merge-ui": true,
+    "source-branch": ["+:*", "-:refs/heads/infra/*"],
+    "target-branch": ["+:refs/heads/master1"]
+}
