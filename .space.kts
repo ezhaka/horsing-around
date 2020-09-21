@@ -5,9 +5,6 @@
 */
 
 job("Hello World!") {
-    container("ubuntu") {
-    	shellScript {
-        	content = "sleep 10"
-        }
-    }
+    container("hello-world")
 }
+
