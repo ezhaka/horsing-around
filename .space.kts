@@ -8,3 +8,10 @@
 job("Hello World!") {
     container("hello-world")
 }
+
+job("Manual") {
+    container("hello-world")
+    
+    startOn {
+    }
+}
