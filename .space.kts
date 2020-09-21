@@ -13,5 +13,6 @@ job("Manual") {
     container("hello-world")
     
     startOn {
+        gitPush { enabled = false }
     }
 }
