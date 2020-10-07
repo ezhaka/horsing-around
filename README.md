@@ -1,6 +1,6 @@
 # gf/diary
 
-asdfasdf
+asdfasdfфывафыва
 
 ## Getting Started
 
