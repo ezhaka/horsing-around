@@ -10,9 +10,13 @@ job("Kaiser Chiefs — Don't Just Stand There, Do Something It would be useful 
 }
 
 job("Manual") {
-    container("hello-world")
-    
     startOn {
         gitPush { enabled = false }
+    }
+    
+    container("openjdk:11") {
+        kotlinScript { api ->
+            throw Exception("kek")
+        }
     }
 }
