@@ -5,7 +5,7 @@
 * For more info, refer to https://www.jetbrains.com/help/space/automation.html
 */
 
-job("Kaiser Chiefs — Don't Just Stand There, Do Something It would be useful if you knew That everything you say and do Potentially could change tomorrow") {
+job("Kaiser Chiefs") {
     container("hello-world")
 }
 
