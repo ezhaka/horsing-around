@@ -9,6 +9,10 @@ job("Kaiser Chiefs") {
     container("hello-world")
 }
 
+job("e591395b9533179d47775061e591395b9533179d47775061e591395b9533179d47775061e591395b9533179d47775061e591395b9533179d47775061e591395b9533179d47775061") {
+    container("hello-world")
+}
+
 job("Manual") {
     startOn {
         gitPush { enabled = false }
