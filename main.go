@@ -11,7 +11,7 @@ import (
 
 type AppHandler struct{}
 
-func (h AppHandler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
+func (h AppHandler) ServeHTTP(resp http.ResponseWriter, req *http.Request) { // Arina
     if req.Method == "GET" && req.URL.Path == "/ping" {
         resp.WriteHeader(200)
     } else if req.Method == "POST" && req.URL.Path == "/convert" {
@@ -51,7 +51,7 @@ func app() error {
 	stop := make(chan os.Signal, 1)
 	signal.Notify(stop, syscall.SIGINT, syscall.SIGTERM)
 
-	select {
+	select {// arina
 	case <-stop:
 	}
 
