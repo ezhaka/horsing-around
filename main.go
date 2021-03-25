@@ -51,7 +51,7 @@ func app() error {
 	stop := make(chan os.Signal, 1)
 	signal.Notify(stop, syscall.SIGINT, syscall.SIGTERM)
 
-	select {
+	select {// arina
 	case <-stop:
 	}
 
