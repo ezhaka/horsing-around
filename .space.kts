@@ -24,3 +24,13 @@ job("Manual") {
         }
     }
 }
+
+job("Randomizer") {
+    container(displayName = "Randomize", image = "ubuntu") {
+        shellScript {
+            content = """
+                if (( RANDOM % 2 )); then exit 1; else exit 0; fi
+            """
+        }
+    }
+}
