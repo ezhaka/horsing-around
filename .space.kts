@@ -31,7 +31,7 @@ job("Randomizer") {
             // interpreter = "/bin/bash"
             content = """
             	#!/bin/bash
-                echo "rand = $RANDOM"
+                echo "rand = \$RANDOM"
                 if (( RANDOM % 2 )); then exit 1; else exit 0; fi
             """
         }
