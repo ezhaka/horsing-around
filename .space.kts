@@ -30,6 +30,7 @@ job("Randomizer") {
         shellScript {
             // interpreter = "/bin/bash"
             content = """
+            	#!/bin/bash
                 if (( RANDOM % 2 )); then exit 1; else exit 0; fi
             """
         }
