@@ -37,9 +37,9 @@ func app() error {
 
 	Info.Printf("Starting server on %s...", listener.Addr().String())
 
-	server := &http.Server{
-		Handler: AppHandler{},
-	}
+	// server := &http.Server{
+	// 	Handler: AppHandler{},
+	// }
 
 	go func() {
 		err = server.Serve(listener)
