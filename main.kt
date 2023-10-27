@@ -3,5 +3,5 @@ fun main(args: Array<String>) {
     1 + 1
     println("Hello, world!")
 
-    val x = 1
+    val x = 2
 }
