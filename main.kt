@@ -4,4 +4,5 @@ fun main(args: Array<String>) {
     println("Hello, world!")
 
     val x = 2
+    val y = 2
 }
